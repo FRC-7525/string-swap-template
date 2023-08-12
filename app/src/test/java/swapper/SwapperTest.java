@@ -58,6 +58,11 @@ class SwapperTest {
         assertFalse(swapper.canSwap("qwertyuiop", "qwertyxxop"));
     }
 
+    @Test
+    public void t4() {
+        assertFalse(swapper.canSwap("abcdd", "ddcba"));
+    }
+
     private String generateString(int length) {
         RandomStringGenerator generator = new RandomStringGenerator.Builder()
             .withinRange('a', 'z').build();
